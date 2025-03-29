@@ -20,18 +20,25 @@
     }
     section {
       padding: 20px;
+      max-width: 800px;
+      margin: auto;
     }
     h1, h2 {
       margin-bottom: 10px;
     }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
+    .service {
+      margin-bottom: 15px;
     }
-    ul li::before {
-      content: "✔️";
-      margin-right: 8px;
-      color: #f06292;
+    .service-title {
+      font-weight: bold;
+      cursor: pointer;
+      color: #d81b60;
+    }
+    .description {
+      display: none;
+      margin-top: 5px;
+      padding-left: 15px;
+      color: #555;
     }
     footer {
       background-color: #f8bbd0;
@@ -49,20 +56,66 @@
 
   <section>
     <h2>Servicios</h2>
-    <ul>
-      <li>Tratamientos Faciales Anti-Edad</li>
-      <li>Tratamientos Para Acné</li>
-      <li>Limpieza Profunda</li>
-      <li>Depilación Con Cera</li>
-      <li>Vajacial</li>
-      <li>Mesoterapia</li>
-      <li>Hidrolipoclasia (Lipo Sin Cirugía)</li>
-      <li>Masajes Reductores</li>
-      <li>Masajes Post Operatorios</li>
-      <li>Tratamiento Para Celulitis</li>
-      <li>Masajes de Relajación</li>
-      <li>Fajas Melibelt</li>
-    </ul>
+
+    <div class="service">
+      <div class="service-title" onclick="toggleDescription(this)">Tratamientos Faciales Anti-Edad</div>
+      <div class="description">Rejuvenecen la piel, mejoran la firmeza y reducen líneas de expresión usando productos especializados.</div>
+    </div>
+
+    <div class="service">
+      <div class="service-title" onclick="toggleDescription(this)">Tratamientos Para Acné</div>
+      <div class="description">Ayudan a limpiar profundamente los poros, controlar el exceso de grasa y reducir inflamaciones.</div>
+    </div>
+
+    <div class="service">
+      <div class="service-title" onclick="toggleDescription(this)">Limpieza Profunda</div>
+      <div class="description">Remueve impurezas, puntos negros y células muertas para una piel fresca y limpia.</div>
+    </div>
+
+    <div class="service">
+      <div class="service-title" onclick="toggleDescription(this)">Depilación Con Cera</div>
+      <div class="description">Eliminación del vello desde la raíz, dejando la piel suave por más tiempo.</div>
+    </div>
+
+    <div class="service">
+      <div class="service-title" onclick="toggleDescription(this)">Vajacial</div>
+      <div class="description">Tratamiento facial para la zona íntima que ayuda a eliminar manchas e irritaciones post-depilación.</div>
+    </div>
+
+    <div class="service">
+      <div class="service-title" onclick="toggleDescription(this)">Mesoterapia</div>
+      <div class="description">Aplicación de vitaminas y medicamentos directamente en la piel para mejorar su apariencia y firmeza.</div>
+    </div>
+
+    <div class="service">
+      <div class="service-title" onclick="toggleDescription(this)">Hidrolipoclasia (Lipo Sin Cirugía)</div>
+      <div class="description">Técnica no invasiva que disuelve la grasa localizada mediante líquidos y ultrasonido.</div>
+    </div>
+
+    <div class="service">
+      <div class="service-title" onclick="toggleDescription(this)">Masajes Reductores</div>
+      <div class="description">Estimulan la quema de grasa localizada y ayudan a moldear el cuerpo.</div>
+    </div>
+
+    <div class="service">
+      <div class="service-title" onclick="toggleDescription(this)">Masajes Post Operatorios</div>
+      <div class="description">Facilitan la recuperación tras cirugías estéticas, reduciendo inflamación y líquidos retenidos.</div>
+    </div>
+
+    <div class="service">
+      <div class="service-title" onclick="toggleDescription(this)">Tratamiento Para Celulitis</div>
+      <div class="description">Reduce la apariencia de la piel de naranja mediante técnicas manuales y aparatología.</div>
+    </div>
+
+    <div class="service">
+      <div class="service-title" onclick="toggleDescription(this)">Masajes de Relajación</div>
+      <div class="description">Terapia suave que reduce el estrés, mejora el estado de ánimo y promueve el bienestar.</div>
+    </div>
+
+    <div class="service">
+      <div class="service-title" onclick="toggleDescription(this)">Fajas Melibelt</div>
+      <div class="description">Fajas moldeadoras que ayudan a resaltar la figura y mejorar la postura.</div>
+    </div>
   </section>
 
   <section>
@@ -76,5 +129,12 @@
   <footer>
     © 2025 Fressa Spa. Todos los derechos reservados.
   </footer>
+
+  <script>
+    function toggleDescription(element) {
+      const desc = element.nextElementSibling;
+      desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
